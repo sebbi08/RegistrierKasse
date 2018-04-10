@@ -1,0 +1,12 @@
+GET http://www.google.de
+Accepts: application/json
+
+<> 2018-04-07T123222.200.html
+
+###
+
+GET http://localhost:80/api/item
+Accepts: application/json
+
+###
+

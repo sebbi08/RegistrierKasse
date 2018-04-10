@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import axios from 'axios'
-
+import VueMaterial from 'vue-material'
 import App from './App'
 import router from './router'
+require('vue-material/dist/vue-material.min.css')
+require('vue-material/dist/theme/default.css')
+
+Vue.use(VueMaterial)
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
