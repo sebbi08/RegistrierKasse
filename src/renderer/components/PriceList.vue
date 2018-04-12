@@ -9,7 +9,7 @@
                 </md-card-header>
 
                 <md-card-content>
-                    {{price.price.toString().replace(".",",")}}€
+                    {{price.price.toFixed(2).toString().replace(".",",")}}€
                 </md-card-content>
 
                 <md-card-actions>
