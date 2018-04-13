@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a503b3c7-4cf7-482a-8984-a2e5f3530382" name="Default" comment="Added Ignore">
+    <list default="true" id="a503b3c7-4cf7-482a-8984-a2e5f3530382" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/components/CashRegister.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/CashRegister.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/components/PriceList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/PriceList.vue" afterDir="false" />
     </list>
@@ -23,8 +22,29 @@
       <file leaf-file-name="CashRegister.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/CashRegister.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="82" column="44" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
+            <state relative-caret-position="295">
+              <caret line="84" column="18" lean-forward="true" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+              <folding>
+                <element signature="e#2427#2470#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/is-online/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-160">
+              <caret line="72" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -32,12 +52,12 @@
       <file leaf-file-name="PriceList.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/PriceList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1401">
-              <caret line="188" column="12" selection-start-line="188" selection-start-column="12" selection-end-line="188" selection-end-column="12" />
+            <state relative-caret-position="697">
+              <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
               <folding>
                 <element signature="n#md-empty-state#0;n#div#0;n#template#0;n#!!top" />
                 <element signature="n#md-button#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#md-dialog#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="e#3389#3430#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,6 +84,9 @@
       <find>listName</find>
       <find>preferenceStore</find>
       <find>cancelList</find>
+      <find>saveList</find>
+      <find>Number.pa</find>
+      <find>showPriceDialog</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Code\RegistrierKasse\src\renderer</dir>
@@ -154,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,6 +212,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,7 +453,9 @@
       <workItem from="1523379076260" duration="84000" />
       <workItem from="1523379177089" duration="1142000" />
       <workItem from="1523551935328" duration="2587000" />
-      <workItem from="1523554533080" duration="3918000" />
+      <workItem from="1523554533080" duration="3990000" />
+      <workItem from="1523640321183" duration="5000" />
+      <workItem from="1523644937391" duration="4199000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1497381910683</created>
@@ -453,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523380020829</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added CashRegister">
+      <created>1523558509835</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523558509835</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74979000" />
+    <option name="totallyTimeSpent" value="79255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,13 +510,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3265086" />
       <window_info anchor="right" id="npm" order="11" sideWeight="0.5449915" side_tool="true" visible="true" weight="0.1444563" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40086207" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40086207" />
       <window_info anchor="right" id="Mongo Explorer" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3599138" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3599138" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.45500848" visible="true" weight="0.15511727" />
       <window_info anchor="bottom" id="Statistic" order="14" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
@@ -504,6 +535,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Nl-Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286638" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -548,15 +580,15 @@
     <MESSAGE value="init" />
     <MESSAGE value="Added Material Design" />
     <MESSAGE value="Added Ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Ignore" />
+    <MESSAGE value="Added CashRegister" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CashRegister" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/electron-prebuilt-compile/electron.d.ts" />
     <entry file="file://$PROJECT_DIR$/.src/store.js" />
     <entry file="file://$PROJECT_DIR$/src/router.ts" />
     <entry file="file://$PROJECT_DIR$/src/Home.vue" />
@@ -631,13 +663,6 @@
     <entry file="file://$PROJECT_DIR$/appveyor.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-36" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md" />
@@ -725,9 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vue-material/src/components/MdCard/MdCard.test.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vue-material/src/components/MdCard/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-89" />
@@ -737,13 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="30" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -761,22 +776,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/is-online/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="72" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/PriceList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1401">
-          <caret line="188" column="12" selection-start-line="188" selection-start-column="12" selection-end-line="188" selection-end-column="12" />
+        <state relative-caret-position="697">
+          <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
           <folding>
             <element signature="n#md-empty-state#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#md-button#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#md-dialog#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#3389#3430#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/CashRegister.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="82" column="44" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
+        <state relative-caret-position="295">
+          <caret line="84" column="18" lean-forward="true" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+          <folding>
+            <element signature="e#2427#2470#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

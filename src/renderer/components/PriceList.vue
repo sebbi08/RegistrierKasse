@@ -9,12 +9,16 @@
                 </md-card-header>
 
                 <md-card-content>
-                    {{price.price.toFixed(2).toString().replace(".",",")}}€
+                    {{Number.parseFloat(price.price).toFixed(2).toString().replace(".",",")}}€
                 </md-card-content>
 
                 <md-card-actions>
-                    <md-button class="md-icon-button" @click="deletePrice(price)"><md-icon>delete</md-icon></md-button>
-                    <md-button class="md-icon-button" @click="editPrice(price)"><md-icon>mode_edit</md-icon></md-button>
+                    <md-button class="md-icon-button" @click="deletePrice(price)">
+                        <md-icon>delete</md-icon>
+                    </md-button>
+                    <md-button class="md-icon-button" @click="editPrice(price)">
+                        <md-icon>mode_edit</md-icon>
+                    </md-button>
                 </md-card-actions>
             </md-card>
         </div>
@@ -106,6 +110,7 @@
                 let priceList = priceLists[id]
                 this.listName = priceList.name
                 this.prices = priceList.priceList
+                this.oldPriceLists = JSON.parse(JSON.stringify(priceLists))
             } else {
                 this.listName = ''
                 this.prices = []
@@ -132,17 +137,19 @@
             },
             savePrice () {
                 if (this.addNewPrice) {
-                    this.prices.push({
-                        name: this.priceToEdit.name,
-                        price: Number.parseFloat(this.priceToEdit.price)
-                    })
+                    for (let i = 0; i < 10; i++) {
+                        this.prices.push({
+                            name: this.priceToEdit.name + i,
+                            price: Number.parseFloat(this.priceToEdit.price++)
+                        })
+                    }
                 }
                 this.resetPriceDialog(true)
             },
             resetPriceDialog (dontReset) {
                 if (!this.addNewPrice && !dontReset) {
                     this.priceToEdit.name = this.oldPriceToEdit.name
-                    this.priceToEdit.price = this.oldPriceToEdit.price
+                    this.priceToEdit.price = Number.parseFloat(this.oldPriceToEdit.price)
                 }
                 this.showPriceDialog = false
                 this.addNewPrice = null
@@ -187,6 +194,9 @@
                 }
             },
             cancelList () {
+                if (this.$route.params.id) {
+                    preferenceStore.set('priceLists', this.oldPriceLists)
+                }
                 this.goBack()
             },
             openListNameDialog () {

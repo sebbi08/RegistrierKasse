@@ -25,13 +25,14 @@
                     </md-ripple>
                 </div>
             </div>
-            <div class="md-layout-item md-layout md-size-30" v-if="currentCard.length">
-                <div class="md-layout-item md-size-100 horizontal-line">
+            <div class="md-layout-item md-layout md-size-30 fit-content" v-if="currentCard.length">
+                <div class="md-layout-item md-size-100 horizontal-line fit-content">
                     <table>
                         <tr v-for="(cardItem,index) in currentCard">
                             <td>{{index !== 0 ? '+' : ''}}</td>
                             <td>{{cardItem.name}}</td>
-                            <td>{{cardItem.price.toFixed(2).toString().replace(".",",")}}€</td>
+                            <td>{{(cardItem.count * cardItem.price).toFixed(2).toString().replace(".",",")}}€</td>
+                            <td>x{{cardItem.count}}</td>
                             <td class="md-clickable" @click="removeFromCard(index)">
                                 <md-icon>delete</md-icon>
                             </td>
@@ -42,11 +43,13 @@
 
                     </div>
                 </div>
-                <div class="md-display-1">All : {{currentCard.reduce((a,b)=> {return a + b.price},0).toFixed(2).toString().replace(".",",")}}€</div>
+                <div class="md-display-1">All : {{currentSum}}€
+                </div>
             </div>
         </div>
 
         <div class="phone-viewport">
+            <md-button class="" @click="goBack()">Abbrechen</md-button>
             <md-button class="md-primary" @click="clear()">Clear</md-button>
         </div>
     </div>
@@ -54,6 +57,7 @@
 
 <script>
     import {preferenceStore} from '../../store'
+    import isOnline from 'is-online'
 
     export default {
         name: 'CashRegister',
@@ -71,27 +75,64 @@
             this.listName = priceList.name
             this.prices = priceList.priceList
         },
+        computed: {
+            currentSum: function () {
+                return this.currentCard.reduce((a, b) => {
+                    return a + (b.price * b.count)
+                }, 0).toFixed(2).toString().replace('.', ',')
+            }
+        },
         methods: {
-            addToCart (price) {
-                this.currentCard.push(price)
+            goBack () {
+                this.$router.push('/')
+            },
+            addToCart (itemToAdd) {
+                let foundItem = this.currentCard.find(function (item) {
+                    return item.name === itemToAdd.name && item.price === itemToAdd.price
+                })
+                if (foundItem) {
+                    foundItem.count++
+                } else {
+                    this.currentCard.push(Object.assign({count: 1}, JSON.parse(JSON.stringify(itemToAdd))))
+                }
             },
             removeFromCard (index) {
-                this.currentCard.splice(index, 1)
+                let itemToRemove = this.currentCard[index]
+                itemToRemove.count--
+                if (itemToRemove.count === 0) {
+                    this.currentCard.splice(index, 1)
+                }
             },
             clear () {
-                let actions = preferenceStore.get('actions')
-                //TODO LOCAL AND SERVER SAVE
+                let data = {
+                    date: new Date(),
+                    card: this.currentCard
+                }
+                isOnline().then((online) => {
+                    if (online) {
+                        this.$http.push()
+                    } else {
+                        let actions = preferenceStore.get('actions')
+                        if (!actions) {
+                            actions = []
+                        }
+                        actions.push(data)
+                    }
+                })
             }
         }
     }
 </script>
 
 <style scoped>
-    .md-clickable{
+    .fit-content{
+        height: fit-content;
+    }
+    .md-clickable {
         cursor: pointer;
     }
 
-    .height-auto{
+    .height-auto {
         height: fit-content;
     }
 
