@@ -226,8 +226,7 @@
             }
         },
         watch: {
-            '$route' (to, from) {
-                debugger
+            $route: function (to, from) {
                 // react to route changes...
             }
         }
